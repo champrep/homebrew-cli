@@ -5,13 +5,13 @@
 class Champrep < Formula
   desc "The official CHAMPREP command-line tool."
   homepage "https://cli.champrep.com"
-  version "0.4.6"
+  version "0.4.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cli.champrep.com/download/v0.4.6/champrep_0.4.6_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7bec6b1e49029416657abaf48d423fc8fb61561adc7e595bdbed3b3c75ca59b8"
+      url "https://cli.champrep.com/download/v0.4.7/champrep_0.4.7_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "dae1561b44095170035bf64b001ef0bdf8b376cfb1f416a4205314782a4997b2"
 
       define_method(:install) do
         bin.install "champrep"
@@ -20,8 +20,8 @@ class Champrep < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://cli.champrep.com/download/v0.4.6/champrep_0.4.6_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2b4cf2883a8938408066c714d999b326934b6a7bdfefc6291de8dc9734ffe045"
+      url "https://cli.champrep.com/download/v0.4.7/champrep_0.4.7_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f4bb2cabef497a21a8f2230fbe7791e92748d221537a9cdd92fac10e2463acf7"
 
       define_method(:install) do
         bin.install "champrep"
@@ -33,8 +33,8 @@ class Champrep < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://cli.champrep.com/download/v0.4.6/champrep_0.4.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d88db6d4bd1a3d3015284ad46c01d0a9f4e360764e463f7746236b7cfb18e23d"
+      url "https://cli.champrep.com/download/v0.4.7/champrep_0.4.7_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ad67296a58a0fe617042c7b5f169b3b75e43c6a6b8041a585088f71bb0f3b25f"
       define_method(:install) do
         bin.install "champrep"
         man1.install Dir["man/*.1"]
@@ -42,8 +42,8 @@ class Champrep < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://cli.champrep.com/download/v0.4.6/champrep_0.4.6_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "00e6785a338fc1609e76224f670e29c427fc395cd6c7afdbe5bdeeb28dfe959e"
+      url "https://cli.champrep.com/download/v0.4.7/champrep_0.4.7_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2f756a654d76c45d560a8a61c7e1162d1104e0a8b7c61de7752653d654ada8c9"
       define_method(:install) do
         bin.install "champrep"
         man1.install Dir["man/*.1"]
